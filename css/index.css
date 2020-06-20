@@ -1,0 +1,175 @@
+
+
+body{
+    font-family: 'work sans', sans serif;
+}
+button{
+    cursor: pointer;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.resultTitle{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 20px;
+}
+.resultSubTitle{
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 1% 0 2% 0;
+}
+.btnContainer, .options{
+    widows: 90%;
+    justify-content: space-around;
+}
+.btn{
+    /*width: 25%;*/
+    border: none;
+    margin: 0 1%;
+    padding: 1% 5%;
+    border-radius: 20px;
+    color: grey;
+}
+.btn:focus{
+    outline: none;
+}
+.sliderMob{
+    display: none;
+}
+.options{
+    padding: 30px 10px 50px 0;
+    font-size: 16px;
+    color: grey;
+}
+.options span{
+    padding: 0 15px;
+}
+table {
+    border-collapse: collapse;
+    margin: 0;
+    width: 100%;
+    /*table-layout: fixed;*/
+}
+table tr {
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+}
+thead tr{
+    border: none;
+}
+table th,
+table td {
+    padding: 1.625em 0;
+    text-align: start;
+    font-size: 14px;;
+}
+table th {
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: grey;
+}
+.applyBtn{
+    padding: 5% 15%;
+    color: white;
+    background: deepskyblue;
+}
+td[data-label = "Option"] span{
+    padding: 1px 5px;
+    border-radius: 15px;
+    color: white;
+}
+td[data-value = "Full Time"] span{
+    background: limegreen;
+}
+td[data-value = "Part Time"] span{
+    background: orangered;
+}
+td[data-value = "Weekend"] span{
+    background: grey;
+}
+td[data-value = "Freelance"] span{
+    background: orange;
+}
+
+.jobsCount{
+        padding-bottom: 3%;
+}
+.jobsCount>span{
+    color: deepskyblue;
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 14px;
+    border-bottom: 3px solid deepskyblue;
+}
+.forCategories{
+        padding-top: 25px;
+        list-style-type: none;
+}
+.forCategories>li{
+    padding-right: 15px;
+    float: left;
+    color: grey;
+}
+.forCategories>li:hover{
+    color: black;
+}
+.forCategories>li.active{
+    color: black;
+}
+.searchBtn{
+    float: right !important;
+    padding: 10px;
+    background: lightgrey;
+    border-radius: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .btnContainer{
+        padding-top: 10px;
+        display: grid;
+    }
+    .btn{
+        margin: 5px !important;
+        border-radius: 5px;;
+    }
+    .sliderMob{
+        display: inline;
+    }
+    .sliderDesk{
+        display: none;
+    }
+    .options>span:first-child{ padding: 0 15px !important;}
+    table thead {
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+    
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+    
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+    
+    table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    table td[data-label = "Apply"]::before{display: none;;}
+    
+    table td:last-child {
+        border-bottom: 0;
+    }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Job Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+  </head>
+  <body>
+    <div class="container">
+        <div>
+            <span class="resultTitle">Search for a job</span>
+            <div class="resultSubTitle">SEE SEARCH RESULTS</div>
+            <div class="btnContainer">
+                <button class="btn" style="margin-left:0" type="button" onclick="changeColor(event)">Keywords (eg Job Title, Position,..)</button>
+                <button class="btn" type="button" onclick="changeColor(event)">Location(City, Country,...)</button>
+                <button class="btn" type="button" onclick="changeColor(event)">Budget 500, 1000$</button>
+                <button class="btn" style="margin-right:0" type="button" onclick="changeColor(event)">Search a job</button>
+            </div>
+            <div class="options">
+                <span style="padding:0 25px 0 0;"><input type="checkbox" name="options" value="Full Time" />Full Time</span>
+                <span><input type="checkbox" name="options" value="Part Time" />Part Time</span>
+                <span><input type="checkbox" name="options" value="Weekend" />Weekend</span>
+                <span><input type="checkbox" name="options" value="Freelance" />Freelance</span>
+                <span class="sliderDesk"><input type="range" min="0" max="500" value="0" onmousemove="changeSlider(event)" style="width: 200px"><span>Distance 0 km </span></span>
+                <span class="sliderMob"><input type="range" min="0" max="500" value="0" ontouchmove="changeSlider(event)" style="width: 200px"><span>Distance 0 km </span></span class="sliderMob">
+            </div>
+        </div>
+        <div class="jobsCount">
+            <span>24123 Jobs found</span>
+            <ul class="forCategories">
+                <li class="active">For job Seeker</li>
+                <li>For Companies</li>
+                <li>Find Candidates</li>
+                <li class="searchBtn"><i class="fa fa-search"></i></li>
+            </ul>
+        </div>
+        <table>
+            <thead>
+              <tr>
+                <th scope="col">job title</th>
+                <th></th>
+                <th scope="col">by</th>
+                <th scope="col">option</th>
+                <th scope="col">location</th>
+                <th scope="col">budget</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Job Title"><img src="https://www.nicepng.com/png/detail/413-4130336_moen-logo-moen-logo-transparent.png" width="70px"/></td>
+                <td>Professional Front-end Developer</td>
+                <td data-label="By">Moen</td>
+                <td data-label="Option" data-value="Full Time"><span>Full Time</span></td>
+                <td data-label="Location">Los Angeles</td>
+                <td data-label="Budget">49$ / h</td>
+                <td data-label="Apply"><button class="btn applyBtn" type="button">Apply</button></td>
+              </tr>
+              <tr>
+                <td data-label="Job Title"><img src="https://p1.hiclipart.com/preview/6/477/148/yamanashi-prefecture-text-sapient-corporation-test-newspaper-logo-png-clipart.jpg" width="70px"></td>
+                <td>Webdesigner Leader</td>
+                <td data-label="By">Sapient</td>
+                <td data-label="Option" data-value="Part Time"><span>Part Time</span></td>
+                <td data-label="Location">Los Angeles</td>
+                <td data-label="Budget">39$ / h</td>
+                <td data-label="Apply"><button class="btn applyBtn" type="button">Apply</button></td>
+              </tr>
+              <tr>
+                <td data-label="Job Title"><img src="https://i7.pngguru.com/preview/534/966/524/logo-dsm-brand-heerlen-chemical-industry-equal-rights-poster.jpg" width="70px"></td>
+                <td>Personal Trainer</td>
+                <td data-label="By">DSM</td>
+                <td data-label="Option" data-value="Freelance"><span>Freelance</span></td>
+                <td data-label="Location">Los Angeles</td>
+                <td data-label="Budget">24$ / h</td>
+                <td data-label="Apply"><button class="btn applyBtn" type="button">Apply</button></td>
+              </tr>
+              <tr>
+                <td data-label="Job Title"><img src="https://www.pngkit.com/png/full/394-3949938_mindshare-uk-partners-with-enactus-to-help-achieve.png" width="70px"></td>
+                <td>Front-end / Back-end Developer</td>
+                <td data-label="By">Mindshare</td>
+                <td data-label="Option" data-value="Weekend"><span>Weekend</span></td>
+                <td data-label="Location">Los Angeles</td>
+                <td data-label="Budget">26$ / h</td>
+                <td data-label="Apply"><button class="btn applyBtn" type="button">Apply</button></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
